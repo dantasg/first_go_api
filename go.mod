@@ -5,6 +5,11 @@ go 1.22.5
 require github.com/gofiber/fiber v1.14.6
 
 require (
+	github.com/joho/godotenv v1.5.1 // indirect
+	github.com/swaggo/files/v2 v2.0.0 // indirect
+)
+
+require (
 	github.com/KyleBanks/depth v1.2.1 // indirect
 	github.com/PuerkitoBio/purell v1.2.1 // indirect
 	github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 // indirect
@@ -16,6 +21,7 @@ require (
 	github.com/go-openapi/spec v0.21.0 // indirect
 	github.com/go-openapi/swag v0.23.0 // indirect
 	github.com/gofiber/fiber/v2 v2.52.5 // indirect
+	github.com/gofiber/swagger v1.1.0
 	github.com/gofiber/utils v0.0.10 // indirect
 	github.com/gofiber/websocket/v2 v2.2.1 // indirect
 	github.com/google/uuid v1.6.0 // indirect

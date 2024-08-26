@@ -8,6 +8,8 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/websocket/v2"
+
+	"github.com/gofiber/swagger"
 )
 
 func AppRoutes(app *fiber.App) {
@@ -20,6 +22,9 @@ func AppRoutes(app *fiber.App) {
 	userController := controllers.NewUserController(userRepository, *clientManager)
 
 	v1 := app.Group("/v1")
+
+	// Rota para acessar a documentação do Swagger
+	app.Get("/swagger/*", swagger.HandlerDefault)
 
 	// Configuração do WebSocket
 	v1.Get("/ws", websocket.New(webSocketManager.WebSocketHandler(clientManager)))
